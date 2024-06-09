@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="field">
+        <canvas id="canvas"></canvas>
+        <div class="tools">
+            <button onClick="undo()" type="button" class="button">undo</button>
+            <button onClick="redo()" type="button" class="button">redo</button>
+            <button onClick="clear_canvas()" type="button" class="button">clear</button>
+            <div onClick="change_color(this)"  class="color-field" style="background:red"></div>
+            <div onClick="change_color(this)"  class="color-field" style="background:blue"></div>
+            <div onClick="change_color(this)"  class="color-field" style="background:green"></div>
+            <div onClick="change_color(this)"  class="color-field" style="background: yellow"></div>
+            <input onInput="drawColor = this.value" type="color" class="color-picker" />
+            <input onInput="drawWidth = this.value"  type="range" min="1"max="100" class="pen-range" />
+        </div>
+        <script src="index.js"></script>
+  </body>
+</html>
